@@ -10,6 +10,7 @@ from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 stop = set(stopwords.words("english"))
 stop.remove("not")
+stop.remove("no")
 posIgnore = ["$","''","(",")",",","--",".",":","CD","FW","LS","NNP","NNPS","NNS","PRP","PRP$","SYM","TO","WDT","WP","WP$","WRB","``"]
 exStr = "There is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level."
 
@@ -25,16 +26,12 @@ def getWnetPos(tag):
     else:
         return None
 
-
 def simplify(parag = exStr):
     stns = sent_tokenize(parag)
     wrds = []
-
     for a in stns:
         wrds.append(word_tokenize(a))
-
     wrdsFilt = []
-
     for i in wrds:
         temp = []
         for j in i:
@@ -62,6 +59,7 @@ def simplify(parag = exStr):
             for ss in wordnet.synsets(word):
                 synons.append(ss)
             synons.sort()
-            word = synons[0]
+            if(synons):
+                word = synons[0]
             synons.clear()
     return wrdsLem
