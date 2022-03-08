@@ -1,5 +1,5 @@
-from bin import simplifier as slr
-from bin import txtExtract as txt
+from pkgs import simplifier as slr
+from pkgs import txt
+from pkgs import compare
 
-
-print(slr.simplify(txt.txt1))
+print(slr.simplify(txt.a))
