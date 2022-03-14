@@ -1,5 +1,5 @@
-from pkgs import simplifier as slr
+from pkgs.simplifier import simplify
 from pkgs import txt
-from pkgs import compare
+from pkgs.compare import comp
 
-print(slr.simplify(txt.a))
+print(comp(simplify(txt.a),simplify(txt.b)))
