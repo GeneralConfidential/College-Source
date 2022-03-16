@@ -23,7 +23,7 @@ def comp(txt1,txt2):
             tmp.append(False)
         sim.append(tmp)
     
-    for i,j in a,b:
+    for i,j in zip(a,b):
         for w1 in i:
             if i == []:
                 break
