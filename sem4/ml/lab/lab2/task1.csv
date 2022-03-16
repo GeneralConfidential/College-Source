@@ -4,8 +4,4 @@ rainy,cold,high,weak,warm,change,no
 sunny,warm,high,strong,warm,change,yes
 sunny,warm,normal,strong,warm,same,no
 rainy,cold,normal,strong,warm,same,no
-rainy,cold,high,strong,warm,change,no
 sunny,warm,high,weak,warm,change,yes
-sunny,warm,high,strong,warm,same,yes
-rainy,cold,normal,weak,warm,change,no
-sunny,warm,high,strong,warm,change,yes
