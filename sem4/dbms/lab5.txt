@@ -1,0 +1,22 @@
+select sid, pid from catalog as c natural join (select sid,max(cost) as maxCost from catalog group by sid) as t where maxCost=cost;
+
+
+select * from supplier where saddr = (select saddr from supplier where sid = 's1') and sid != 's1';
+
+select * from supplier as s , (select sid, saddr as addr from supplier where sid = 's1') as t where s.sid!=t.sid and saddr = addr;
+
+
+select sid, pname from catalog as c natural join (select sid,max(cost) as maxCost from catalog group by sid) as t natural join part as p where maxCost=cost;
+
+select t1.sid,t2.sid from (select sid,count(pid) as cnt from catalog group by sid) as t1 , (select sid,count(pid) as cnt from catalog group by sid) as t2 where t1.cnt > t2.cnt;
+
+
+
+
+
+
+
+
+select sid from (select sid,count(pid) as cnt from catalog group by sid) as t where cnt = (select count(pid) from part);
+
+
