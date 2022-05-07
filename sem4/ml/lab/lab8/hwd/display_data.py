@@ -27,7 +27,7 @@ def display_data(X, tile_width=-1, padding=0):
 
     tile_height_padded = tile_height + padding * 2
     tile_width_padded = tile_width + padding * 2
-    data = np.zeros((display_rows * tile_height_padded, display_columns * tile_width_padded))
+    data = np.zeros((int(display_rows) * int(tile_height_padded), int(display_columns) * int(tile_width_padded)))
 
     for i in range(display_rows):
         for j in range(display_columns):
