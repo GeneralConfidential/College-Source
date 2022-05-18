@@ -1,0 +1,5 @@
+ create table flat (
+    ->  fno varchar(2),
+    ->  faddr text,
+integer
+ );

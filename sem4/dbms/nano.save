@@ -1,0 +1,11 @@
+create table flat (
+ fno varchar(2),
+ faddr text,
+ fage integer
+);
+
+create table owner (
+    ->  oid varchar(2),
+    ->  oname text,
+    ->  oage integer
+
